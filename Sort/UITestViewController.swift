@@ -12,7 +12,7 @@ class UITestViewController: UIViewController {
 
     lazy var inputTextField: UITextField = {
         let input = UITextField(frame: CGRect(x: 30, y: 100, width: self.view.frame.size.width - 60, height: 50))
-        input.placeholder = "请输入小于6位的字符"
+        input.placeholder = "请输入6位的字符"
         input.textColor = .black
         return input
     }()

@@ -32,7 +32,22 @@ class UITestViewController: XCTestCase {
     }
     func testVertifyAction () {
         
-       
+        
+        
+        let app = XCUIApplication()
+        app.buttons["UI测试"].tap()
+        
+        let textField = app.textFields["请输入6位的字符"]
+        textField.tap()
+    
+        textField.typeText("sdasdk")
+        
+        let button = app.buttons["验证"]
+        button.tap()
+        
+        // 不等于6位数，就失败
+        XCTAssertEqual(textField.title.count , 6, "必须等于6位数")
+
         
     }
 }
